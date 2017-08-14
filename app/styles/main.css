@@ -1,0 +1,23 @@
+body {
+    font-family: "Helvetica Neue";
+}
+
+aside {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #DEDEDE;
+    padding: 10px 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+li {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+    color: #8E8F94;
+}

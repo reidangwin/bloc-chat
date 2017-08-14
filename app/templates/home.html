@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bloc-Chat Rooms</title>
 </head>
 <body>
 
-<h1>Home Page</h1>
+<aside>
+    <h1>Bloc Chat</h1>
+    <div ng-repeat="room in rooms.allRooms" style="margin:0">
+        <li> {{ room.$value }}</li>
+    </div>
+</aside>
 
 </body>
 </html>
