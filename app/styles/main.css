@@ -13,6 +13,13 @@ aside {
 
 h1 {
     margin-bottom: 10px;
+    display: inline;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+ul {
+    padding: 0;
 }
 
 li {
@@ -20,4 +27,15 @@ li {
     margin: 5px 0;
     padding: 0;
     color: #8E8F94;
+}
+
+button {
+    border: none;
+    color: #B7B8B9;
+    background-color: #F6F7FB;
+    display: inline-block;
+    margin: 10px 0 10px 10px;
+    padding: 5px;
+    font-size: 10px;
+    vertical-align: baseline;
 }

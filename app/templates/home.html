@@ -8,9 +8,10 @@
 
 <aside>
     <h1>Bloc Chat</h1>
-    <div ng-repeat="room in rooms.allRooms" style="margin:0">
-        <li> {{ room.$value }}</li>
-    </div>
+    <button ng-click="Home.newRoom()">New Room</button>
+    <ul class="rooms" ng-repeat="room in Home.allRooms">
+        <li> {{ room.$value }} </li>
+    </ul>
 </aside>
 
 </body>
