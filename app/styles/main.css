@@ -9,6 +9,7 @@ aside {
     bottom: 0;
     background-color: #DEDEDE;
     padding: 10px 20px;
+    float: left;
 }
 
 h1 {
@@ -16,6 +17,10 @@ h1 {
     display: inline;
     font-size: 25px;
     vertical-align: middle;
+}
+
+h2 {
+    font-size: 20px;
 }
 
 ul {
@@ -38,4 +43,39 @@ button {
     padding: 5px;
     font-size: 10px;
     vertical-align: baseline;
+}
+
+.messages {
+    float: left;
+    position: absolute;
+    left: 250px;
+    right: 0px;
+    /*padding: 20px;*/
+}
+
+table {
+    width: 100%;
+}
+
+h2, td {
+    padding: 0 20px;
+}
+
+td:nth-child(1) {
+    width: 85%;
+}
+
+td:nth-child(2) {
+    width: 15%;
+    color: #8E8F94;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.odd {
+    background-color: #F6F7FB;
+}
+
+.userName {
+    font-weight: bold;
 }

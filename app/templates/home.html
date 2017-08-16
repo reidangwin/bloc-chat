@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bloc-Chat Rooms</title>
+    <title>Bloc Chat</title>
 </head>
 <body>
 
@@ -10,9 +10,23 @@
     <h1>Bloc Chat</h1>
     <button ng-click="Home.newRoom()">New Room</button>
     <ul class="rooms" ng-repeat="room in Home.allRooms">
-        <li> {{ room.$value }} </li>
+        <li ng-click="Home.changeRoom(room)">{{ room.$value }}</li>
     </ul>
 </aside>
+
+<section class="messages">
+    <h2>{{ Home.currentRoom.$value }}</h2>
+    <table ng-repeat="message in Home.messages">
+        <tr ng-class-odd="'odd'" ng-class-even="'even'">
+            <td class="userName">{{ message.username }}</td>
+            <td class="sentAt">{{ Home.newDate(message.sentAt) | date:'h:mm a' }}</td>
+        </tr>
+        <tr ng-class-odd="'odd'" ng-class-even="'even'">
+            <td class="content">{{ message.content }}</td>
+            <td></td>
+        </tr>
+    </table>
+</section>
 
 </body>
 </html>
