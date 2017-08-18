@@ -14,19 +14,24 @@
     </ul>
 </aside>
 
-<section class="messages">
-    <h2>{{ Home.currentRoom.$value }}</h2>
-    <table ng-repeat="message in Home.messages">
-        <tr ng-class-odd="'odd'" ng-class-even="'even'">
-            <td class="userName">{{ message.username }}</td>
-            <td class="sentAt">{{ Home.newDate(message.sentAt) | date:'h:mm a' }}</td>
-        </tr>
-        <tr ng-class-odd="'odd'" ng-class-even="'even'">
-            <td class="content">{{ message.content }}</td>
-            <td></td>
-        </tr>
-    </table>
+<h2 id="currentRoom">{{ Home.currentRoom.$value }}</h2>
+<section id="messages" scroll-glue>
+        <table ng-repeat="message in Home.messages">
+            <tr ng-class-odd="'odd'" ng-class-even="'even'">
+                <td class="userName">{{ message.username }}</td>
+                <td class="sentAt">{{ Home.newDate(message.sentAt) | date:'h:mm a' }}</td>
+            </tr>
+            <tr ng-class-odd="'odd'" ng-class-even="'even'">
+                <td class="content">{{ message.content }}</td>
+                <td></td>
+            </tr>
+        </table>
+    <div id="newMessageContainer">
+        <input type="text" id="message" name="input" ng-model="Home.newMessage.content">
+        <button class="submitButton" type="submit" ng-click="Home.sendMessage()" ng-disabled="!Home.newMessage.content">Send</button>
+    </div>
 </section>
+
 
 </body>
 </html>
